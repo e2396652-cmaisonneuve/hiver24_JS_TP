@@ -1,0 +1,209 @@
+/* COULEURS */
+
+* {
+    font-family: "DM Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    --indigo: #0a26ba;
+    --beige: #f6f0e8;
+    --beigeBG: #f6f0e841;
+    --orange: #ff4f0d;
+    --pink: #f798c9;
+    --yellow: #fcf533;
+    --plum: #59002e;
+    --gray: #707070;
+}
+
+/* STRUCTURE DES PAGES */
+
+.contenu
+{
+    width: 800px;
+    background: #fff;
+    margin: 50px auto;
+}
+
+/* FORMULAIRE */
+
+.formulaire {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formSection {
+    border: 1px solid var(--beige);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.titlePanier {
+    margin-bottom: 20px;
+}
+
+.navigation-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+form .groupe-champs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+}
+
+/* CHAMPS */
+
+form input, select{
+    font-size: 1.125rem;
+    padding: 0.5rem;
+    border: 1px solid lightgray;
+    outline: none;
+    line-height: 1.2rem;
+    color: gray;
+}
+
+form input::placeholder {
+    color: gray;
+}
+
+.long{
+    width: 100%;
+}
+
+.confirmation {
+    padding-left: 15px;
+}
+
+.msgConfimation {
+    padding: 0.5rem;
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: row;
+}
+
+/* BOUTONS */
+
+.btnindigo {
+    background-color: var(--indigo);
+    color: white;
+}
+
+.btnindigo:hover {
+    background-color: var(--orange);
+    color: white;
+} 
+
+form input[type="submit"],
+form button {
+    font-family: "DM Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: white;
+    background-color: var(--plum);
+    padding: 15px 25px;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 350ms;
+    min-width: 15ch;
+    cursor: pointer;
+    
+
+}
+
+form input[type="submit"]:hover,
+form button:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    background-color: var(--indigo);
+}
+
+form input[type="submit"]:disabled,
+form button:disabled {
+    background-color: grey;
+    pointer-events: none;
+}
+/* RESUME */
+
+.resume_info {
+    font-weight: 400;
+    padding-right: 10px;
+    font-size: 1rem;
+    color: black;
+}
+
+.resume h4 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.resume_reponse {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.resume p {
+    padding-bottom: 0.5rem;
+    color: var(--indigo);
+    margin: 0px 15px;
+}
+
+.resume_section {
+    border-bottom: 0px var(--plum) dotted;
+    padding: 15px;
+    margin: 20px 0px;
+    color: var(--plum);
+    background-color: #f6f0e841;
+}
+
+/* VALIDATION */
+
+form [name] + p.error-message {
+    display: none;
+}
+  
+form .invalid + p.error-message {
+    display: initial;
+}
+  
+form .invalid {
+    border: 4px solid red;
+}
+
+form input:invalid {
+    border-color: red;
+}
+
+form input:valid {
+    border-color: green;
+}
+
+.error-message {
+    letter-spacing: 0.02rem;
+    color: red;
+}
+
+.succes-message {
+    letter-spacing: 0.02rem;
+    color: green;
+    display: none;
+}
+
+
+/* CACHER et DÉSACTIVER */
+.invisible {
+    display: none;
+}
+
+.inactif{
+    background-color: lightgray;
+    color: var(--gray);
+    pointer-events: none;
+}

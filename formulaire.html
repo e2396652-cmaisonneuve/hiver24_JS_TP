@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FORMULAIRE</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="assets/js/pages/accueil.js" defer></script>
+    <script src="assets/js/modules/navigation.js" defer></script>
+    <script src="assets/js/pages/formulaire.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <!-- en-tête de page -->
+        <header>
+            <nav id="nav-principale">
+                <img src="assets/img/logo.svg" alt="logo" class="logo" />
+                <ul class="nav__liste"></ul>
+            </nav>
+        </header>
+        <main>
+            <div class="contenu">
+                <h1>Formulaire d'achat</h1>
+                <form id="formulaire-principal" action="" method="post" name="formulaireAchat">
+                    <!-- SECTION 1: INFO CLIENT -->
+                    <section data-page="1" class="formSection">
+                        <div class="titlePanier">
+                            <h3>Informations sur le client</h3>
+                        </div>
+                        <!-- champs formulaire -->
+                        <div class="formulaire">
+                            <!-- champ: Prenom -->
+                            <div class="groupe-champs">
+                                <label for="prenom">Prénom</label>
+                                <input type="text" id="prenom" name="prenom" class="long" maxlength="50" required
+                                    pattern="^[a-zA-Z\s]{3,20}$" placeholder="ex. Jean" />
+                                <p class="error-message">Veuillez entrer un prénom</p>
+                            </div>
+                            <!-- champ: Nom -->
+                            <div class="groupe-champs">
+                                <label for="nom">Nom de famille</label>
+                                <input type="text" id="nom" class="long" name="nom" maxlength="50" required
+                                    pattern="^[a-zA-Z\s]{3,30}$" placeholder="ex. Drapeau" />
+                                <p class="error-message">Veuillez entrer un nom de famille</p>
+                            </div>
+                            <!-- champ: Telephone -->
+                            <div class="groupe-champs">
+                                <label for="tel">Telephone</label>
+                                <input type="tel" id="tel" name="tel" class="long" maxlength="15" required
+                                    pattern="[1-9][0-9 \-\(\)\.]{7,32}$" placeholder="ex. 555 555-5555">
+                                <p class="error-message">Veuillez entrer un numéro de téléphone</p>
+                            </div>
+                            <div class="groupe-champs">
+                                <!-- champ: Courriel -->
+                                <label for="email">Courriel</label>
+                                <input type="email" class="long" id="email" name="email" required
+                                    pattern="[^@\s]+@[^@\s]+" maxlength="50" placeholder="ex. monadresse@courriel.com">
+                                <p class="error-message">Veuillez entrer un courriel valide</p>
+                            </div>
+                            <!-- champ: Date naissance -->
+                            <div class="groupe-champs">
+                                <label for="datenaissance">Date de naissance</label>
+                                <input type="date" id="datenaissance" class="long" name="datenaissance" required />
+                                <p class="error-message">Veuillez entrer votre date de naissance</p>
+                            </div>
+                        </div>
+                        <!-- navigation entre les panneaux -->
+                        <div class="navigation-section">
+                            <button data-direction="-1">Précédent</button>
+                            <button data-direction="1">Suivant</button>
+                        </div>
+                    </section>
+
+                    <!-- SECTION 2: INFO LIVRAISON -->
+                    <section data-page="2" class="formSection">
+                        <div class="titlePanier">
+                            <h3>Informations sur la livraison</h3>
+                        </div>
+                        <!-- champs formulaire -->
+                        <div class="formulaire">
+                            <!-- champ: Adresse -->
+                            <div class="groupe-champs">
+                                <label for="adresse">Adresse</label>
+                                <input type="text" id="adresse" class="long" name="adresse" maxlength="100" required
+                                    placeholder="ex. Avenue du Poisson, 123 apt# 5B">
+                                <p class="error-message">Veuillez entrer votre adresse</p>
+                            </div>
+                            <!-- champ: Vile -->
+                            <div class="groupe-champs">
+                                <label for="ville">Ville</label>
+                                <input type="text" id="ville" class="long" name="ville" maxlength="80" required
+                                    placeholder="ex. Poutineville">
+                                <p class="error-message">Veuillez entrer votre ville</p>
+                            </div>
+                            <!-- champ: Province -->
+                            <div class="groupe-champs">
+                                <label for="select">Province</label>
+                                <select name="province" id="province" class="long" required>
+                                    <option value="">Choisir la province</option>
+                                    <option id="AB" value="AB">Alberta</option>
+                                    <option id="BC" value="BC">Colombie-Britannique</option>
+                                    <option id="MB" value="MB">Manitoba</option>
+                                    <option id="NB" value="NB">Nouveau-Brunswick</option>
+                                    <option id="NL" value="NL">Terre-Neuve-et-Labrador</option>
+                                    <option id="NT" value="NT">Territoires du Nord-Ouest</option>
+                                    <option id="NS" value="NS">Nouvelle-Écosse</option>
+                                    <option id="NU" value="NU">Nunavut</option>
+                                    <option id="ON" value="ON">Ontario</option>
+                                    <option id="PE" value="PE">île-du-Prince-Édouard</option>
+                                    <option id="QC" value="QC">Québec</option>
+                                    <option id="SK" value="SK">Saskatchewan</option>
+                                    <option id="YT" value="YT">Yukon</option>
+                                </select>
+                            </div>
+                            <!-- champ: Pays -->
+                            <div class="groupe-champs long">
+                                <label for="pays">Pays</label>
+                                <select name="pays" id="pays" class="long" required>
+                                    <option value="">Choisir le pays</option>
+                                    <option id="CA" value="CA">Canada</option>
+                                    <option id="US" value="US">États-Unis</option>
+                                    <option id="BR" value="BR">Brésil</option>
+                                    <option id="PT" value="PT">Portugal</option>
+                                </select>
+                            </div>
+                            <!-- champ: Code Postal -->
+                            <div class="groupe-champs long">
+                                <label for="codepostal">Code postal</label>
+                                <input type="text" id="codepostal" class="long" name="codepostal" required
+                                    pattern="\d{5}(?:-\d{4})?|[a-zA-Z]\d[a-zA-Z] ?\d[a-zA-Z]\d" maxlength="7"
+                                    placeholder="ex. A1B 2C3">
+                                <p class="error-message">Veuillez entrer votre code postal</p>
+                            </div>
+                            <!-- champ: confirmation -->
+                            <div class="groupe-champs">
+                                <input type="checkbox" id="confirmation" name="confirmation" checked />
+                                <label for="confirmation" class="confirmation">Envoyer une confirmation de livraison par
+                                    email</label>
+                            </div>
+                        </div>
+                        <!-- navigation entre les panneaux -->
+                        <div class="navigation-section">
+                            <button data-direction="-1">Précédent</button>
+                            <button data-direction="1">Suivant</button>
+                        </div>
+                    </section>
+
+                    <!-- SECTION 3: PAIEMENT -->
+                    <section data-page="3" class="formSection">
+                        <div class="titlePanier">
+                            <h3>Informations paiement</h3>
+                        </div>
+                        <!-- champs formulaire -->
+                        <div class="formulaire">
+                            <!-- champ: Type carte -->
+                            <div>
+                                <legend>Type de carte de crédit</legend><br>
+                                <input id="visa" name="cardtype" type="radio" value="Visa" />
+                                <label for="visa">VISA</label>
+                                <input id="amex" name="cardtype" type="radio" value="AmEx" />
+                                <label for="amex">AmEx</label>
+                                <input id="mastercard" name="cardtype" type="radio" value="Mastercard" />
+                                <label for="mastercard">Mastercard</label>
+                            </div>
+                            <!-- champ: Titulaire carte -->
+                            <div class="groupe-champs">
+                                <label for="namecard">Titulaire de la carte</label>
+                                <input id="namecard" name="namecard" type="text" class="long" required
+                                    placeholder="Prénom Nom">
+                                <p class="error-message">Veuillez entrer le nom du titulaire de la carte</p>
+                            </div>
+                            <!-- champ: Numero carte -->
+                            <div class="groupe-champs">
+                                <label for="cardnumber">Numéro de carte de crédit</label>
+                                <input id="cardnumber" name="cardnumber" type="text" class="long" required
+                                    placeholder="0000-0000-0000-0000" pattern="[0-9\s]+">
+                                <p class="error-message">Veuillez entrer le numéro de votre carte</p>
+                            </div>
+                            <!-- champ: CVC carte -->
+                            <div class="groupe-champs">
+                                <label for="secure">CVC</label>
+                                <input id="secure" name="secure" type="text" class="long" required maxlength="3"
+                                    placeholder="000" pattern="[0-9]{3}">
+                                <p class="error-message">Veuillez entrer votre CVC</p>
+                            </div>
+                            <div class="groupe-champs">
+                                <!-- champ: Expiration carte -->
+                                <label for="expiration">Date d'expiration</label>
+                                <!-- champ: mois expiration -->
+                                <select name="mois_exp" id="expiration" class="select1">
+                                    <option value="1">01</option>
+                                    <option value="2">02</option>
+                                    <option value="3">03</option>
+                                    <option value="4">04</option>
+                                    <option value="5">05</option>
+                                    <option value="6">06</option>
+                                    <option value="7">07</option>
+                                    <option value="8">08</option>
+                                    <option value="9">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                                <span>/</span>
+                                <!-- champ: ans expiration -->
+                                <select name="ans_exp" id="expiration" class="select2">
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- navigation entre les panneaux -->
+                        <div class="navigation-section">
+                            <button data-direction="-1">Précédent</button>
+                            <button data-direction="1">Suivant</button>
+                        </div>
+                    </section>
+
+                    <!-- SECTION 4: RESUME -->
+                    <section data-page="4" class="formSection">
+                        <div class="titlePanier">
+                            <h3>Résumé de la commande</h3>
+                        </div>
+                        <div class="resume">
+                            <!-- Resume info client -->
+                            <div class="resume_section">
+                                <h4>Informations sur le client</h4>
+                            </div>
+                            <p><span class="resume_info">Prenom:</span><span data-name="prenom"
+                                    class="resume_reponse">xxx</span></p>
+                            <p><span class="resume_info">Nom:</span><span data-name="nom"
+                                    class="resume_reponse">xxx</span></p>
+                            <p><span class="resume_info">Telephone:</span><span data-name="tel"
+                                    class="resume_reponse">xxx</span></p>
+                            <p><span class="resume_info">Courriel:</span><span data-name="email"
+                                    class="resume_reponse">xxx</span></p>
+                            <p><span class="resume_info">Date de naissance:</span><span data-name="datenaissance"
+                                    class="resume_reponse">xxx</span></p>
+                            <!-- Resume info livraison -->
+                            <div class="resume_section">
+                                <h4>Informations livraison</h4>
+                            </div>
+                            <p><span class="resume_info">Adresse:</span><span data-name="adresse"
+                                    class="resume_reponse">xxx</span></p>
+                            <p><span class="resume_info">Ville:</span><span data-name="ville"
+                                    class="resume_reponse">xxx</span></p>
+                            <p><span class="resume_info">Province:</span><span data-name="province"
+                                    class="resume_reponse">xxx</span></p>
+                            <p><span class="resume_info">Pays:</span><span data-name="pays"
+                                    class="resume_reponse">xxx</span></p>
+                            <p><span class="resume_info">Code postal:</span><span data-name="codepostal"
+                                    class="resume_reponse">xxx</span></p>
+                            <p><span class="resume_info">Confirmation Livraison:</span><span class="resume_reponse"
+                                    data-name="confirmation">xxx</span></p>
+                            <!-- Resume info paiment -->
+                            <div class="resume_section">
+                                <h4>Informations paiement</h4>
+                            </div>
+                            <p><span class="resume_info">Card Type:</span><span data-name="cardtype"
+                                    class="resume_reponse">xxx</span></p>
+                            <p><span class="resume_info">Name on Card:</span><span data-name="namecard"
+                                    class="resume_reponse">xxx</span></p>
+                            <p><span class="resume_info">Card Number:</span><span data-name="cardnumber"
+                                    class="resume_reponse">xxx</span></p>
+                            <p><span class="resume_info">Security Code:</span><span data-name="secure"
+                                    class="resume_reponse">xxx</span></p>
+                            <p><span class="resume_info">Expiration:</span><span data-name="mois_exp"
+                                    class="resume_reponse">xxx</span> / <span data-name="ans_exp"
+                                    class="resume_reponse">xxx</span></p>
+                        </div>
+                        <!-- navigation entre les panneaux -->
+                        <div class="navigation-section">
+                            <button data-direction="-1">Précédent</button>
+                            <button data-direction="1" class="buttonForm btnindigo">Finalizer achat</button>
+                        </div>
+                    </section>
+                </form>
+            </div>
+        </main>
+        <!-- BAS DE PAGE (main.js) -->
+        <footer></footer>
+    </div>
+</body>
+
+</html>

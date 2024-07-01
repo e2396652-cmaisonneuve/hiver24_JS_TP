@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TP 3 - QUIZ</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="assets/js/pages/accueil.js" defer></script>
+    <script src="assets/js/modules/navigation.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav id="nav-principale">
+            <img src="assets/img/logo.svg" alt="logo" class="logo" />
+            <ul class="nav__liste"></ul>
+        </nav>
+    </header>
+    <main>
+        <section class="produits">
+            <div class="section-header">
+                <h1>Liste des livres</h1>
+                <div class="filtres">
+                    <div class="filtre alpha croissant">alphabétique a-z</div>
+                    <div class="filtre alpha decroissant">alphabétique z-a</div>
+                    <div class="filtre prix">20$ et moins</div>
+                </div>
+            </div>
+            <div class="liste-livres"></div>
+        </section>
+        <section class="vedette">
+            <h3 class="titreDetails"></h3>
+            <div class="livre-vedette">
+                <div><img class="cover-vedette"></div>
+                <div class="info-vedette">
+                    <h6 class="auteur"></h6>
+                    <h2 class="titre"></h2>
+                    <p class="description"></p>
+                    <h4 class="prix-vedette"></h4>
+                    <h6 class="isbn-vedette"></h6>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+
+</html>

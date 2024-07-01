@@ -1,0 +1,309 @@
+@import url("./reset.css");
+@import url("./formulaire.css");
+@import url("./quiz.css");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    --indigo: #0a26ba;
+    --beige: #f6f0e8;
+    --beigeBG: #f6f0e841;
+    --orange: #ff4f0d;
+    --pink: #f798c9;
+    --yellow: #fcf533;
+    --plum: #59002e;
+    --gray: #707070;
+}
+
+p {
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.2rem;
+    max-width: 80ch;
+    
+}
+
+h1 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 4rem;
+    font-weight: 100;
+}
+
+h2 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 2.3rem;
+    line-height: 2.6rem;
+    font-weight: 600;
+}
+
+h4 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    font-weight: 600;
+}
+
+h5 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    font-weight: 500;
+    color: var(--indigo)
+}
+
+h6 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    font-weight: 500;
+    color: var(--gray);
+}
+
+.prix-vedette {
+    font-family: "DM Sans", sans-serif;
+    font-size: 2rem;
+    line-height: 2.3rem;
+    font-weight: 600;
+    color: var(--indigo)
+}
+
+.auteur {
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    color: var(--gray);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: var(--beige);
+    padding: 10px 30px;
+    min-height: 100px;
+}
+
+/* ENTETE */
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: var(--beige);
+    padding: 10px 30px;
+    min-height: 100px;
+}
+
+nav .logo {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    max-width: 250px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    gap: 30px;
+    min-width: 100%;
+}
+
+nav .nav__liste {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav__liste a{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color:indigo;
+    background-color: var(--beigeBG);
+    text-transform: uppercase;
+    padding: 15px 30px;
+    text-decoration: none;    
+}
+
+.nav__liste a:hover{
+    background-color:var(--indigo);
+    color: white;
+}
+
+/* PRODUITS */
+
+main
+{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 85vh;
+}
+
+
+
+.produits {
+    margin:30px 30px;
+}
+
+.titreDetails {
+    color: var(--plum);
+    margin-top: 30px;
+    margin-left: 30px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.vedette {
+    background-color: var(--beigeBG);
+    min-width: 95vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.vedette .livre:hover{
+    transform: none;
+}
+
+.livre-vedette {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    margin: 30px;
+    max-width: 80%;
+
+}
+
+.livre-vedette img{
+    max-width: 50vh;
+}
+
+.info-vedette {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.liste-livres {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 20px;
+    gap: 10px;
+    
+}
+
+.livre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-basis: 15%;
+    padding: 15px;
+    gap: 2px;
+    cursor: pointer;
+}
+
+.livre:hover {
+    color: var(--orange);
+    font-weight: 800;
+}
+
+.livre img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    padding-bottom: 9px;
+}
+
+.section-header {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.section-header .filtres {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: end;
+}
+.section-header .filtres .filtre {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    font-family: "DM Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    background: var(--plum);
+    color: white;
+    cursor: pointer;
+}
+
+.section-header .filtres .filtre:hover {
+    background-color: var(--pink);;
+    color: var(--plum);
+
+}
+
+/* PAGES */
+
+.contenu
+{
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+}
+
+button {
+    background-color: var(--plum);
+    color: white;
+    padding: 10px;
+    border: none;
+    margin-top: 10px;
+    transition: all 100ms ease-in-out;
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+    text-transform: uppercase;
+} 
+
+button:hover {
+    cursor: pointer;
+    background-color: #ff4f0d;
+}
+
+footer { 
+    background-color: var(--plum);
+    color: var(--pink);
+    padding: 20px;
+    font-size: 0.8rem;
+}

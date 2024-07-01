@@ -1,0 +1,165 @@
+/* COULEURS */
+
+* {
+    font-family: "DM Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    --indigo: #0a26ba;
+    --beige: #f6f0e8;
+    --beigeBG: #f6f0e841;
+    --orange: #ff4f0d;
+    --pink: #f798c9;
+    --yellow: #fcf533;
+    --plum: #59002e;
+    --gray: #707070;
+}
+
+/* ANIMATIONS */
+
+@keyframes titreAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.animTitreFadeIn {
+    animation: fadeInTitre 5000ms forwards;
+  }
+
+/* STRUCTURE DES PAGES */
+
+.contenu {
+    padding: 30px;
+}
+
+
+.animationDebut {
+    animation: titreAnimation 2000ms;
+}
+
+.section__border {
+    min-width: 120vh;
+    align-items: center;
+    padding: 30px;
+    border: 1px solid var(--beige);
+}
+
+.question__section {
+    align-content: center;
+    display: flex;
+    flex-direction: column;    
+    gap: 30px;
+    min-width: 50vw;
+    align-items: center;
+    padding: 30px;
+    border: 1px solid var(--beige);
+}
+
+.quiz_bievenue {
+    max-width: 15ch;
+    text-align: center;
+}
+
+.question__titre {
+    text-align: center;
+    max-width: 30ch;
+}
+
+.question__options {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.question__info {
+    border-bottom: 1px var(--plum) dotted;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    min-width: 80%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    color: var(--plum);
+}
+
+.score-fin {
+    color: black;
+    text-align: center;
+}
+
+.score {
+    color: var(--orange);
+}
+
+.message-fin {
+    font-family: "DM Sans", sans-serif;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    font-weight: 300;
+}
+
+/* BOUTONS */
+
+.bouton {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    color: white;
+    background-color: var(--plum);
+    cursor: pointer;
+    transition: all 350ms;
+    box-shadow: none;
+    outline: none;
+    border: none;
+}
+
+.bouton:hover {
+    background-color: var(--orange);
+    transform: scale(1.05);
+    text-decoration: underline;
+}
+
+.bouton_choix {
+    font-size: 1.2rem;
+    background-color: var(--plum);
+    color: white;
+    text-transform: capitalize;
+}
+
+.bonne-reponse {
+    background-color: green;
+    pointer-events: none;
+}
+
+.bouton_start {
+    background-color: var(--indigo);
+    pointer-events: auto;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.quiz-conteneur {
+    min-width: 50vw;
+    padding: 30px;
+    border: 0px solid var(--beige);
+}
+
+
+
+/* CACHER et DÉSACTIVER */
+.invisible {
+    display: none;
+}
+
+.inactif{
+    background-color: lightgray;
+    color: var(--gray);
+    pointer-events: none;
+}

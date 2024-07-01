@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TP3 - QUIZ</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="assets/js/pages/accueil.js" defer></script>
+    <script src="assets/js/modules/navigation.js" defer></script>
+    <script type="module" src="assets/js/pages/quiz.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div>
+        <!-- en-tête de page -->
+        <header>
+            <nav id="nav-principale">
+                <img src="assets/img/logo.svg" alt="logo" class="logo" />
+                <ul class="nav__liste"></ul>
+            </nav>
+        </header>
+        <main>
+            <div class="contenu">
+                <!-- PANNEAU DEBUT -->
+                <section class="quiz-panneau-debut question__section animationDebut">
+                    <img src="assets/img/undraw_illustration.svg" alt="illustration" width="300px">
+                    <h1 class="quiz_bievenue">Bievenue au quiz sur la littérature québécoise</h1>
+                    <div class="bouton bouton_start invisible" data-action="demarrer-quiz">Démarrer</div>
+                </section>
+                <!-- AFFICHER LES QUESTIONS ICI -->
+                <div class="quiz-conteneur"></div>
+                <!-- TEMPLATE QUESTION -->
+                <template id="question">
+                    <section class="question__section">
+                        <h3 class="question__titre">Lorem Ipsum?</h3>
+                        <ul class="question__options">
+                            <li class="bouton bouton_choix">reponse 1</li>
+                            <li class="bouton bouton_choix">reponse 2</li>
+                            <li class="bouton bouton_choix">reponse 3</li>
+                        </ul>
+                        <h4 class="pointage"></h4>
+                        <p class="message-reponse"></p>
+                    </section>
+                </template>
+                <!-- PANNEAU FIN -->
+                <section class="quiz-panneau-fin question__section">
+                    <h2 class="score-fin">Total de points: <span class="pointage">0</span></h2>
+                    <h3 class="message-fin">Merci pour votre participation! 🏆</h3>
+                </section>
+            </div>
+        </main>
+        <!-- BAS DE PAGE (main.js) -->
+        <footer></footer>
+    </div>
+</body>
+
+</html>
